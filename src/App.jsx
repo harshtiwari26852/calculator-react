@@ -13,7 +13,10 @@ function App() {
     }
     else if(buttonText === '='){
       const result = eval(calVal);
-      setCalVal(result);
+      setCalVal(result.toString());
+    }
+    else if(buttonText === '<-'){
+      setCalVal(calVal.slice(0, -1));
     }
     else{
       const newDisplayValue = calVal + buttonText;
